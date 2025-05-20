@@ -5,6 +5,8 @@ export function useToggle(initialValue = false){
     const toggle = ()=>{
         setValue((prev)=>!prev)
     }
+    document.body.style.backgroundColor = value ? 'black' : 'white';
+    document.body.style.color = value ? 'white' : 'black';
 
     return[value , toggle]
 }
